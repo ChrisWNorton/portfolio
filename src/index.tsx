@@ -4,6 +4,7 @@ import './index.css';
 import 'fontsource-roboto';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
