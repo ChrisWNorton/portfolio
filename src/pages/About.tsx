@@ -60,12 +60,12 @@ const ProgrammingSkills = [
     {
         name: 'Python',
         level: 60,
-        color:'orange'
-    }, 
+        color: 'orange',
+    },
     {
         name: 'Java',
         level: 50,
-        color: 'pink'
+        color: 'pink',
     },
     {
         name: 'Kotlin',
@@ -85,12 +85,12 @@ const FrameworkSkills = [
     {
         name: 'Django',
         level: 60,
-        color:'orange'
-    }, 
+        color: 'orange',
+    },
     {
         name: 'Angular',
         level: 40,
-        color: 'pink'
+        color: 'pink',
     },
     {
         name: 'Express',
@@ -109,7 +109,7 @@ const Skills = styled.div`
 function About() {
     return(
       <Outer>
-        <Img src={require("../assets/AboutImage.jpg")}/>
+        <Img src={require("../assets/AboutImage.jpg")} />
         <TextHolder>
           <h1>About Me</h1>
           <Text>
@@ -136,19 +136,19 @@ function About() {
         </TextHolder>
         <h2>Programming Languages</h2>
         <Skills>
-        <div style={{width:'60%'}}>
-            <SkillBars skills={ProgrammingSkills}/>
-            </div>
+          <div style={{ width: '60%' }}>
+            <SkillBars skills={ProgrammingSkills} />
+          </div>
         </Skills>
         <h2>Frameworks</h2>
         <Skills>
-        <div style={{width:'60%'}}>
-            <SkillBars skills={FrameworkSkills}/>
-            </div>
+          <div style={{ width: '60%' }}>
+            <SkillBars skills={FrameworkSkills} />
+          </div>
         </Skills>
         <LogoHolder>
-            <a href="https://www.github.com/ChrisWNorton"><Logo src={require("../assets/GitHubLogo.png")}/></a>
-            <a href="https://www.linkedin.com/in/chriswnorton/"><Logo src={require("../assets/LinkedInLogo.png")}/></a>
+          <a href="https://www.github.com/ChrisWNorton"><Logo src={require("../assets/GitHubLogo.png")} /></a>
+          <a href="https://www.linkedin.com/in/chriswnorton/"><Logo src={require("../assets/LinkedInLogo.png")} /></a>
         </LogoHolder>
       </Outer>
     )
