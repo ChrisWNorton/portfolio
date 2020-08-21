@@ -8,12 +8,19 @@ const Outer = styled.div`
     h1{
         font-size: 4em;
     }
+    @media only screen and (max-width: 768px){
+        font-size: 13px;
+    }
 `
 
 const Text = styled.div`
     padding: 2rem 4em 0 4em;
     text-align:left;
     font-size:1.3em;
+    @media only screen and (max-width: 768px){
+        padding: 2rem 1em 0 1em;
+    }
+
 `
 
 const TextHolder = styled.div`
@@ -22,10 +29,19 @@ const TextHolder = styled.div`
     margin: 2em;
 `
 
+const Img = styled.img`
+    width: 100%;
+    height:20%;
+    @media only screen and (max-width: 768px){
+        height: 60%;
+    }
+
+`
+
 function About() {
     return(
       <Outer>
-        <img src={require("../assets/AboutImage.jpg")} style={{ width: '100%', height: '40%' }} />
+        <Img src={require("../assets/AboutImage.jpg")}/>
         <TextHolder>
           <h1>About Me</h1>
           <Text>
