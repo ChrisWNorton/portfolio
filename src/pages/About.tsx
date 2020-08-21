@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SkillBars } from 'react-skills';
 
 const Outer = styled.div`
     font-family: Roboto;
@@ -7,6 +8,10 @@ const Outer = styled.div`
 
     h1{
         font-size: 4em;
+    }
+
+    h2{
+        font-size: 2em;
     }
     @media only screen and (max-width: 768px){
         font-size: 13px;
@@ -45,6 +50,57 @@ const Logo = styled.img`
     margin: 1em;
 `
 
+const ProgrammingSkills = [
+    {
+        name: 'Typescript',
+        level: 60,
+        color: 'blue',
+        labelWidth: 0,
+    },
+    {
+        name: 'Python',
+        level: 60,
+        color:'orange'
+    }, 
+    {
+        name: 'Java',
+        level: 50,
+        color: 'pink'
+    },
+    {
+        name: 'Kotlin',
+        level: 60,
+        color: 'grey',
+
+    },
+]
+
+const FrameworkSkills = [
+    {
+        name: 'React',
+        level: 60,
+        color: 'blue',
+        labelWidth: 0,
+    },
+    {
+        name: 'Django',
+        level: 60,
+        color:'orange'
+    }, 
+    {
+        name: 'Angular',
+        level: 40,
+        color: 'pink'
+    },
+    {
+        name: 'Express',
+        level: 60,
+        color: 'grey',
+
+    },
+
+]
+
 function About() {
     return(
       <Outer>
@@ -65,11 +121,29 @@ function About() {
             development, but I am also very interested in machine learning and the applications of it in
             modern society.
           </Text>
-        <h1 style={{paddingTop:"1em"}}>Skills</h1>
+          <Text>
+            I have always been very interested in technology, and learned my first programming language (Lua)
+            when I was just 13 years old. This love and curiosity towards technology has been a trait I
+            continue to have and nurture. Currently, my main interest and area of focus in full stack web
+            development, but I am also very interested in machine learning and the applications of it in
+            modern society.
+          </Text>
         </TextHolder>
+        <h2>Programming Languages</h2>
+        <div style={{width:'100%', display: 'flex', justifyContent:'center'}}>
+        <div style={{width:'60%'}}>
+            <SkillBars skills={ProgrammingSkills}/>
+            </div>
+        </div>
+        <h2>Frameworks</h2>
+        <div style={{width:'100%', display: 'flex', justifyContent:'center'}}>
+        <div style={{width:'60%'}}>
+            <SkillBars skills={FrameworkSkills}/>
+            </div>
+        </div>
         <LogoHolder>
-            <Logo src={require("../assets/GitHubLogo.png")}/>
-            <Logo src={require("../assets/LinkedInLogo.png")}/>
+            <a href="https://www.github.com/ChrisWNorton"><Logo src={require("../assets/GitHubLogo.png")}/></a>
+            <a href="https://www.linkedin.com/in/chriswnorton/"><Logo src={require("../assets/LinkedInLogo.png")}/></a>
         </LogoHolder>
       </Outer>
     )
