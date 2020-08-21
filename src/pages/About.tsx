@@ -98,8 +98,13 @@ const FrameworkSkills = [
         color: 'grey',
 
     },
-
 ]
+
+const Skills = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`
 
 function About() {
     return(
@@ -130,17 +135,17 @@ function About() {
           </Text>
         </TextHolder>
         <h2>Programming Languages</h2>
-        <div style={{width:'100%', display: 'flex', justifyContent:'center'}}>
+        <Skills>
         <div style={{width:'60%'}}>
             <SkillBars skills={ProgrammingSkills}/>
             </div>
-        </div>
+        </Skills>
         <h2>Frameworks</h2>
-        <div style={{width:'100%', display: 'flex', justifyContent:'center'}}>
+        <Skills>
         <div style={{width:'60%'}}>
             <SkillBars skills={FrameworkSkills}/>
             </div>
-        </div>
+        </Skills>
         <LogoHolder>
             <a href="https://www.github.com/ChrisWNorton"><Logo src={require("../assets/GitHubLogo.png")}/></a>
             <a href="https://www.linkedin.com/in/chriswnorton/"><Logo src={require("../assets/LinkedInLogo.png")}/></a>
