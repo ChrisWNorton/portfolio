@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ProjectModal from "./ProjectModal";
 
-interface props {
+interface ProjectProps {
   projectName: string;
   abridgedProjectDescription: string;
   fullProjectDescription: string;
@@ -67,7 +67,7 @@ function ProjectCard({
   projectLogo: logo,
   color,
   projectImage,
-}: props) {
+}: ProjectProps) {
   const [showProjectModal, setProjectModal] = useState(false);
 
   return (
