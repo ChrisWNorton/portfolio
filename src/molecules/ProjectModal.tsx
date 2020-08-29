@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Modal, Button } from "react-bootstrap";
 
-interface props {
+interface ModalProps {
   show: boolean;
   onHide: () => void;
   projectTitle: string;
@@ -22,7 +22,7 @@ function ProjectModal({
   projectTitle,
   fullProjectDescription,
   projectImage,
-}: props) {
+}: ModalProps) {
   return (
     <Modal show={show} onHide={onHide} centered size="lg">
       <Modal.Header closeButton>
