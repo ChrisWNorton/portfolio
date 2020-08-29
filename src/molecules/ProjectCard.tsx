@@ -1,10 +1,13 @@
-import React, { HTMLAttributes } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import ProjectModal from "./ProjectModal";
 
 interface props {
   projectName: string;
-  description: string;
-  logo: string;
+  abridgedProjectDescription: string;
+  fullProjectDescription: string;
+  projectLogo: string;
+  projectImage: string;
   color: string;
 }
 
@@ -57,16 +60,32 @@ const ImageHolder = styled.img`
   }
 `;
 
-function ProjectCard({ projectName, description, logo, color }: props) {
+function ProjectCard({
+  projectName,
+  abridgedProjectDescription,
+  fullProjectDescription,
+  projectLogo: logo,
+  color,
+  projectImage,
+}: props) {
+  const [showProjectModal, setProjectModal] = useState(false);
+
   return (
     <ProjectOuter>
-      <ProjectHolder color={color}>
+      <ProjectHolder color={color} onClick={() => setProjectModal(true)}>
         <ImageHolder src={logo} alt="GitHub" />
         <ProjectText>
           <h3>{projectName}</h3>
-          <ProjectDescription>{description}</ProjectDescription>
+          <ProjectDescription>{abridgedProjectDescription}</ProjectDescription>
         </ProjectText>
       </ProjectHolder>
+      <ProjectModal
+        show={showProjectModal}
+        onHide={() => setProjectModal(false)}
+        projectTitle={projectName}
+        projectImage={projectImage}
+        fullProjectDescription={fullProjectDescription}
+      />
     </ProjectOuter>
   );
 }

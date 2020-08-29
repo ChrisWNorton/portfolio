@@ -5,28 +5,39 @@ import { Modal, Button } from "react-bootstrap";
 interface props {
   show: boolean;
   onHide: () => void;
+  projectTitle: string;
+  fullProjectDescription: string;
+  projectImage: string;
 }
 
 const InfoHolder = styled.div`
   display: flex;
-  align-items: center;
+  flex-flow: column;
+  text-align: left;
 `;
 
-function ProjectModal({ show, onHide }: props) {
+function ProjectModal({
+  show,
+  onHide,
+  projectTitle,
+  fullProjectDescription,
+  projectImage,
+}: props) {
   return (
     <Modal show={show} onHide={onHide} centered size="lg">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          <h1>Passr</h1>
+          <h1>{projectTitle}</h1>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <InfoHolder>
           <img
-            src={require("../assets/GestureRecognition.png")}
+            src={projectImage}
             style={{ width: "100%", padding: "2em" }}
             alt="Poster"
           />
+          <div>{fullProjectDescription}</div>
         </InfoHolder>
       </Modal.Body>
       <Modal.Footer>
