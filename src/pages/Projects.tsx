@@ -13,6 +13,7 @@ function Projects() {
         projectName="Passr"
         description="An application I worked on as part of a club."
         logo={require("../assets/GitHubLogo.png")}
+        color="orange"
       />
     </Outer>
   );
