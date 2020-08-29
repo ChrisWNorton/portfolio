@@ -1,10 +1,11 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import styled from "styled-components";
 
 interface props {
   projectName: string;
   description: string;
   logo: string;
+  color: string;
 }
 
 const ProjectOuter = styled.div`
@@ -22,7 +23,7 @@ const ProjectHolder = styled.div`
   align-items: center;
   height: 8em;
   width: 50%;
-  background-color: orange;
+  background-color: ${({ color }) => color};
   cursor: pointer;
   :hover {
     transform: scale(1.1);
@@ -56,10 +57,10 @@ const ImageHolder = styled.img`
   }
 `;
 
-function ProjectCard({ projectName, description, logo }: props) {
+function ProjectCard({ projectName, description, logo, color }: props) {
   return (
     <ProjectOuter>
-      <ProjectHolder>
+      <ProjectHolder color={color}>
         <ImageHolder src={logo} alt="GitHub" />
         <ProjectText>
           <h3>{projectName}</h3>
