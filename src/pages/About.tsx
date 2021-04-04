@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { SkillBars } from "react-skills";
 
 const Outer = styled.div`
   font-family: Roboto;
@@ -37,11 +36,6 @@ const TextHolder = styled.div`
   margin: 2em;
 `;
 
-const Img = styled.img`
-  width: 100%;
-  height: 20%;
-`;
-
 const LogoHolder = styled.div`
   display: flex;
   justify-content: center;
@@ -51,60 +45,6 @@ const Logo = styled.img`
   height: 4em;
   width: 4em;
   margin: 1em;
-`;
-
-const ProgrammingSkills = [
-  {
-    name: "Typescript",
-    level: 60,
-    color: "blue",
-    labelWidth: 0,
-  },
-  {
-    name: "Python",
-    level: 60,
-    color: "orange",
-  },
-  {
-    name: "Java",
-    level: 50,
-    color: "pink",
-  },
-  {
-    name: "Kotlin",
-    level: 60,
-    color: "grey",
-  },
-];
-
-const FrameworkSkills = [
-  {
-    name: "React",
-    level: 60,
-    color: "blue",
-    labelWidth: 0,
-  },
-  {
-    name: "Django",
-    level: 60,
-    color: "orange",
-  },
-  {
-    name: "Angular",
-    level: 40,
-    color: "pink",
-  },
-  {
-    name: "Express",
-    level: 60,
-    color: "grey",
-  },
-];
-
-const Skills = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
 `;
 
 function About() {
@@ -129,9 +69,10 @@ function About() {
           curiosity towards technology has been a trait I continue to have and
           nurture. Currently, my main interest and area of focus in full stack
           web development, but I am also very interested in machine learning and
-          the applications of it in modern society. I am currently a full-stack Software Developer at TinyEye, primarily working
-          with Angular, Flask, and various AWS services to deploy our application. Please
-          feel free to checkout my projects.
+          the applications of it in modern society. I am currently a full-stack
+          Software Developer at TinyEye, primarily working with Angular, Flask,
+          and various AWS services to deploy our application. Please feel free
+          to checkout my projects.
         </Text>
         <Text>
           Please feel free to check out my resume, projects, or connect with me on LinkedIn!
