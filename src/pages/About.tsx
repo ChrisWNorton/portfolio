@@ -13,6 +13,10 @@ const Outer = styled.div`
   h2 {
     font-size: 2em;
   }
+  @media only screen and (min-width: 1025px) {
+    margin: 7em 30em;
+  }
+
   @media only screen and (max-width: 768px) {
     font-size: 13px;
   }
@@ -106,7 +110,7 @@ const Skills = styled.div`
 function About() {
   return (
     <Outer>
-      <Img src={require("../assets/AboutImage.jpg")} />
+      {/* <Img src={require("../assets/AboutImage.jpg")} /> */}
       <TextHolder>
         <h1>About Me</h1>
         <Text>
@@ -116,7 +120,8 @@ function About() {
           had several hobbies, including: soccer, mountain biking, swimming and
           programming simple games. I played soccer my entire life, and have
           always enjoyed being part of a team and would describe myself as a
-          team player.
+          team player. I continue to reside on Vancouver Island, getting to enjoy the
+          beautiful outdoors :)
         </Text>
         <Text>
           I have always been very interested in technology, and learned my first
@@ -124,29 +129,14 @@ function About() {
           curiosity towards technology has been a trait I continue to have and
           nurture. Currently, my main interest and area of focus in full stack
           web development, but I am also very interested in machine learning and
-          the applications of it in modern society.
+          the applications of it in modern society. I am currently a full-stack Software Developer at TinyEye, primarily working
+          with Angular, Flask, and various AWS services to deploy our application. Please
+          feel free to checkout my projects.
         </Text>
         <Text>
-          I have always been very interested in technology, and learned my first
-          programming language (Lua) when I was just 13 years old. This love and
-          curiosity towards technology has been a trait I continue to have and
-          nurture. Currently, my main interest and area of focus in full stack
-          web development, but I am also very interested in machine learning and
-          the applications of it in modern society.
+          Please feel free to check out my resume, projects, or connect with me on LinkedIn!
         </Text>
       </TextHolder>
-      <h2>Programming Languages</h2>
-      <Skills>
-        <div style={{ width: "60%" }}>
-          <SkillBars skills={ProgrammingSkills} />
-        </div>
-      </Skills>
-      <h2>Frameworks</h2>
-      <Skills>
-        <div style={{ width: "60%" }}>
-          <SkillBars skills={FrameworkSkills} />
-        </div>
-      </Skills>
       <LogoHolder>
         <a href="https://www.github.com/ChrisWNorton">
           <Logo src={require("../assets/GitHubLogo.png")} />
